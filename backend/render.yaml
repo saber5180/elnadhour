@@ -1,0 +1,11 @@
+# Optionnel : déploiement Render via Blueprint (https://render.com/docs/blueprint-spec)
+# Sinon : dans le tableau de bord du Web Service, mets Start Command = npm start
+services:
+  - type: web
+    name: el-nadhour-backend
+    runtime: node
+    plan: free
+    # Runs against DATABASE_URL so tables (e.g. users) exist before the app starts
+    buildCommand: npm install && npm run migrate
+    startCommand: npm start
+    healthCheckPath: /api/health

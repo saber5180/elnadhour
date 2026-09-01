@@ -1,0 +1,13 @@
+node_modules
+.git
+.env
+.env.local
+backend/.pgdata
+backend/.pgdata-menu
+backend/uploads
+frontend/dist
+*.md
+test-*.js
+setup-*.js
+setup-*.bat
+setup-*.sh
